@@ -13,6 +13,31 @@
 		7B41307425ADC4E1001360D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B41307225ADC4E1001360D5 /* Main.storyboard */; };
 		7B41307625ADC4E3001360D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B41307525ADC4E3001360D5 /* Assets.xcassets */; };
 		7B41307925ADC4E3001360D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B41307725ADC4E3001360D5 /* LaunchScreen.storyboard */; };
+		7B41308325ADC55B001360D5 /* DreamListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41308225ADC55B001360D5 /* DreamListViewControllerTableViewController.swift */; };
+		7B41308725ADCE20001360D5 /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41308625ADCE20001360D5 /* Dream.swift */; };
+		7B41309225ADD34D001360D5 /* FireBreathingParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B41308C25ADD34D001360D5 /* FireBreathingParticle.sks */; };
+		7B41309325ADD34D001360D5 /* LaserFocusParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B41308D25ADD34D001360D5 /* LaserFocusParticle.sks */; };
+		7B41309425ADD34D001360D5 /* MagicParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B41308E25ADD34D001360D5 /* MagicParticle.sks */; };
+		7B41309525ADD34D001360D5 /* RainParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B41308F25ADD34D001360D5 /* RainParticle.sks */; };
+		7B41309625ADD34D001360D5 /* SnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B41309025ADD34D001360D5 /* SnowParticle.sks */; };
+		7B41309725ADD34D001360D5 /* FirefliesParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B41309125ADD34D001360D5 /* FirefliesParticle.sks */; };
+		7B41309A25ADD35B001360D5 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B41309925ADD35B001360D5 /* spark.png */; };
+		7B41309E25ADD965001360D5 /* Dream+Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41309D25ADD965001360D5 /* Dream+Diff.swift */; };
+		7B4130A425ADDE62001360D5 /* Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4130A325ADDE62001360D5 /* Rendering.swift */; };
+		7B4130A925ADDED7001360D5 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4130A825ADDED7001360D5 /* Drawable.swift */; };
+		7BA24E2325ADE5FB00834976 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E2225ADE5FB00834976 /* Layout.swift */; };
+		7BA24E2825ADE64000834976 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E2725ADE64000834976 /* UIView+Layout.swift */; };
+		7BA24E2C25ADE64600834976 /* SKNode+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E2B25ADE64600834976 /* SKNode+Layout.swift */; };
+		7BA24E3425ADE99C00834976 /* InsetLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E3325ADE99C00834976 /* InsetLayout.swift */; };
+		7BA24E3825ADEBA700834976 /* BackgroundLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E3725ADEBA700834976 /* BackgroundLayout.swift */; };
+		7BA24E3B25ADECA100834976 /* ZStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E3A25ADECA100834976 /* ZStackLayout.swift */; };
+		7BA24E3E25ADED2100834976 /* CascadingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E3D25ADED2100834976 /* CascadingLayout.swift */; };
+		7BA24E4125ADEE6300834976 /* DecoratingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E4025ADEE6300834976 /* DecoratingLayout.swift */; };
+		7BA24E4425ADEF8700834976 /* MultiPaneLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E4325ADEF8700834976 /* MultiPaneLayout.swift */; };
+		7BA24E4725ADF05600834976 /* DreamEffectLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E4625ADF05600834976 /* DreamEffectLayout.swift */; };
+		7BA24E4C25ADF30900834976 /* CreatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E4B25ADF30900834976 /* CreatureCell.swift */; };
+		7BA24E5025ADF30F00834976 /* DreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E4F25ADF30F00834976 /* DreamCell.swift */; };
+		7BA24E5325ADF5D500834976 /* DreamPreviewHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E5225ADF5D500834976 /* DreamPreviewHeaderReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +49,31 @@
 		7B41307525ADC4E3001360D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B41307825ADC4E3001360D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B41307A25ADC4E3001360D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B41308225ADC55B001360D5 /* DreamListViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		7B41308625ADCE20001360D5 /* Dream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
+		7B41308C25ADD34D001360D5 /* FireBreathingParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireBreathingParticle.sks; sourceTree = "<group>"; };
+		7B41308D25ADD34D001360D5 /* LaserFocusParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LaserFocusParticle.sks; sourceTree = "<group>"; };
+		7B41308E25ADD34D001360D5 /* MagicParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MagicParticle.sks; sourceTree = "<group>"; };
+		7B41308F25ADD34D001360D5 /* RainParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainParticle.sks; sourceTree = "<group>"; };
+		7B41309025ADD34D001360D5 /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
+		7B41309125ADD34D001360D5 /* FirefliesParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FirefliesParticle.sks; sourceTree = "<group>"; };
+		7B41309925ADD35B001360D5 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		7B41309D25ADD965001360D5 /* Dream+Diff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dream+Diff.swift"; sourceTree = "<group>"; };
+		7B4130A325ADDE62001360D5 /* Rendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rendering.swift; sourceTree = "<group>"; };
+		7B4130A825ADDED7001360D5 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		7BA24E2225ADE5FB00834976 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		7BA24E2725ADE64000834976 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		7BA24E2B25ADE64600834976 /* SKNode+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Layout.swift"; sourceTree = "<group>"; };
+		7BA24E3325ADE99C00834976 /* InsetLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLayout.swift; sourceTree = "<group>"; };
+		7BA24E3725ADEBA700834976 /* BackgroundLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundLayout.swift; sourceTree = "<group>"; };
+		7BA24E3A25ADECA100834976 /* ZStackLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackLayout.swift; sourceTree = "<group>"; };
+		7BA24E3D25ADED2100834976 /* CascadingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CascadingLayout.swift; sourceTree = "<group>"; };
+		7BA24E4025ADEE6300834976 /* DecoratingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratingLayout.swift; sourceTree = "<group>"; };
+		7BA24E4325ADEF8700834976 /* MultiPaneLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPaneLayout.swift; sourceTree = "<group>"; };
+		7BA24E4625ADF05600834976 /* DreamEffectLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamEffectLayout.swift; sourceTree = "<group>"; };
+		7BA24E4B25ADF30900834976 /* CreatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureCell.swift; sourceTree = "<group>"; };
+		7BA24E4F25ADF30F00834976 /* DreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamCell.swift; sourceTree = "<group>"; };
+		7BA24E5225ADF5D500834976 /* DreamPreviewHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamPreviewHeaderReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +106,9 @@
 		7B41306B25ADC4E1001360D5 /* LucidDreamsSimilar */ = {
 			isa = PBXGroup;
 			children = (
-				7B41306C25ADC4E1001360D5 /* AppDelegate.swift */,
-				7B41306E25ADC4E1001360D5 /* SceneDelegate.swift */,
+				7B41308925ADD308001360D5 /* View */,
+				7B41308525ADC568001360D5 /* Model */,
+				7B41308125ADC537001360D5 /* Controller */,
 				7B41307025ADC4E1001360D5 /* ViewController.swift */,
 				7B41307225ADC4E1001360D5 /* Main.storyboard */,
 				7B41307525ADC4E3001360D5 /* Assets.xcassets */,
@@ -65,6 +116,118 @@
 				7B41307A25ADC4E3001360D5 /* Info.plist */,
 			);
 			path = LucidDreamsSimilar;
+			sourceTree = "<group>";
+		};
+		7B41308125ADC537001360D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B41306C25ADC4E1001360D5 /* AppDelegate.swift */,
+				7B41306E25ADC4E1001360D5 /* SceneDelegate.swift */,
+				7B41308225ADC55B001360D5 /* DreamListViewControllerTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B41308525ADC568001360D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B41308625ADCE20001360D5 /* Dream.swift */,
+				7B41309D25ADD965001360D5 /* Dream+Diff.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B41308925ADD308001360D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BA24E2125ADE5E800834976 /* Layout */,
+				7B41308A25ADD310001360D5 /* SpriteKit */,
+				7B4130A225ADDE55001360D5 /* Rendering */,
+				7BA24E4925ADF2E900834976 /* Table View */,
+				7BA24E4A25ADF2EF00834976 /* Collection View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B41308A25ADD310001360D5 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				7B41308B25ADD319001360D5 /* Particles */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
+		7B41308B25ADD319001360D5 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				7B41308C25ADD34D001360D5 /* FireBreathingParticle.sks */,
+				7B41309125ADD34D001360D5 /* FirefliesParticle.sks */,
+				7B41308D25ADD34D001360D5 /* LaserFocusParticle.sks */,
+				7B41308E25ADD34D001360D5 /* MagicParticle.sks */,
+				7B41308F25ADD34D001360D5 /* RainParticle.sks */,
+				7B41309025ADD34D001360D5 /* SnowParticle.sks */,
+				7B41309925ADD35B001360D5 /* spark.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		7B4130A225ADDE55001360D5 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				7B4130A825ADDED7001360D5 /* Drawable.swift */,
+				7B4130A325ADDE62001360D5 /* Rendering.swift */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		7BA24E2125ADE5E800834976 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				7BA24E2225ADE5FB00834976 /* Layout.swift */,
+				7BA24E2625ADE63400834976 /* Leaves */,
+				7BA24E3225ADE96D00834976 /* Shared */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		7BA24E2625ADE63400834976 /* Leaves */ = {
+			isa = PBXGroup;
+			children = (
+				7BA24E2725ADE64000834976 /* UIView+Layout.swift */,
+				7BA24E2B25ADE64600834976 /* SKNode+Layout.swift */,
+			);
+			path = Leaves;
+			sourceTree = "<group>";
+		};
+		7BA24E3225ADE96D00834976 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7BA24E3325ADE99C00834976 /* InsetLayout.swift */,
+				7BA24E3725ADEBA700834976 /* BackgroundLayout.swift */,
+				7BA24E3A25ADECA100834976 /* ZStackLayout.swift */,
+				7BA24E3D25ADED2100834976 /* CascadingLayout.swift */,
+				7BA24E4025ADEE6300834976 /* DecoratingLayout.swift */,
+				7BA24E4325ADEF8700834976 /* MultiPaneLayout.swift */,
+				7BA24E4625ADF05600834976 /* DreamEffectLayout.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7BA24E4925ADF2E900834976 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				7BA24E4B25ADF30900834976 /* CreatureCell.swift */,
+				7BA24E4F25ADF30F00834976 /* DreamCell.swift */,
+			);
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		7BA24E4A25ADF2EF00834976 /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				7BA24E5225ADF5D500834976 /* DreamPreviewHeaderReusableView.swift */,
+			);
+			path = "Collection View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +288,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B41307925ADC4E3001360D5 /* LaunchScreen.storyboard in Resources */,
+				7B41309425ADD34D001360D5 /* MagicParticle.sks in Resources */,
+				7B41309625ADD34D001360D5 /* SnowParticle.sks in Resources */,
+				7B41309325ADD34D001360D5 /* LaserFocusParticle.sks in Resources */,
+				7B41309725ADD34D001360D5 /* FirefliesParticle.sks in Resources */,
+				7B41309A25ADD35B001360D5 /* spark.png in Resources */,
 				7B41307625ADC4E3001360D5 /* Assets.xcassets in Resources */,
+				7B41309225ADD34D001360D5 /* FireBreathingParticle.sks in Resources */,
+				7B41309525ADD34D001360D5 /* RainParticle.sks in Resources */,
 				7B41307425ADC4E1001360D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +308,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B41307125ADC4E1001360D5 /* ViewController.swift in Sources */,
+				7B4130A425ADDE62001360D5 /* Rendering.swift in Sources */,
 				7B41306D25ADC4E1001360D5 /* AppDelegate.swift in Sources */,
+				7BA24E5025ADF30F00834976 /* DreamCell.swift in Sources */,
+				7B4130A925ADDED7001360D5 /* Drawable.swift in Sources */,
+				7BA24E4425ADEF8700834976 /* MultiPaneLayout.swift in Sources */,
+				7BA24E2825ADE64000834976 /* UIView+Layout.swift in Sources */,
+				7BA24E3B25ADECA100834976 /* ZStackLayout.swift in Sources */,
+				7BA24E3425ADE99C00834976 /* InsetLayout.swift in Sources */,
+				7B41308325ADC55B001360D5 /* DreamListViewControllerTableViewController.swift in Sources */,
+				7BA24E3825ADEBA700834976 /* BackgroundLayout.swift in Sources */,
+				7BA24E2325ADE5FB00834976 /* Layout.swift in Sources */,
+				7B41308725ADCE20001360D5 /* Dream.swift in Sources */,
+				7B41309E25ADD965001360D5 /* Dream+Diff.swift in Sources */,
+				7BA24E4C25ADF30900834976 /* CreatureCell.swift in Sources */,
 				7B41306F25ADC4E1001360D5 /* SceneDelegate.swift in Sources */,
+				7BA24E4725ADF05600834976 /* DreamEffectLayout.swift in Sources */,
+				7BA24E2C25ADE64600834976 /* SKNode+Layout.swift in Sources */,
+				7BA24E3E25ADED2100834976 /* CascadingLayout.swift in Sources */,
+				7BA24E4125ADEE6300834976 /* DecoratingLayout.swift in Sources */,
+				7BA24E5325ADF5D500834976 /* DreamPreviewHeaderReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
