@@ -13,7 +13,7 @@
 		7B41307425ADC4E1001360D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B41307225ADC4E1001360D5 /* Main.storyboard */; };
 		7B41307625ADC4E3001360D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B41307525ADC4E3001360D5 /* Assets.xcassets */; };
 		7B41307925ADC4E3001360D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B41307725ADC4E3001360D5 /* LaunchScreen.storyboard */; };
-		7B41308325ADC55B001360D5 /* DreamListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41308225ADC55B001360D5 /* DreamListViewControllerTableViewController.swift */; };
+		7B41308325ADC55B001360D5 /* DreamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41308225ADC55B001360D5 /* DreamListViewController.swift */; };
 		7B41308725ADCE20001360D5 /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41308625ADCE20001360D5 /* Dream.swift */; };
 		7B41309225ADD34D001360D5 /* FireBreathingParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B41308C25ADD34D001360D5 /* FireBreathingParticle.sks */; };
 		7B41309325ADD34D001360D5 /* LaserFocusParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7B41308D25ADD34D001360D5 /* LaserFocusParticle.sks */; };
@@ -38,6 +38,15 @@
 		7BA24E4C25ADF30900834976 /* CreatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E4B25ADF30900834976 /* CreatureCell.swift */; };
 		7BA24E5025ADF30F00834976 /* DreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E4F25ADF30F00834976 /* DreamCell.swift */; };
 		7BA24E5325ADF5D500834976 /* DreamPreviewHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA24E5225ADF5D500834976 /* DreamPreviewHeaderReusableView.swift */; };
+		7BEC8F8725AE7C73008EF9CF /* DreamScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC8F8625AE7C73008EF9CF /* DreamScene.swift */; };
+		7BEC8F8A25AE7EF2008EF9CF /* CreatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC8F8925AE7EF2008EF9CF /* CreatureCollectionViewCell.swift */; };
+		7BEC8F8D25AE81ED008EF9CF /* EffectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC8F8C25AE81ED008EF9CF /* EffectCollectionViewCell.swift */; };
+		7BEC8F9025AE870D008EF9CF /* CollectionViewHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC8F8F25AE870D008EF9CF /* CollectionViewHeaderReusableView.swift */; };
+		7BEC8F9425AE87D5008EF9CF /* TextEntryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC8F9325AE87D5008EF9CF /* TextEntryCollectionViewCell.swift */; };
+		7BEC8F9A25AE88C8008EF9CF /* DreamListViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC8F9925AE88C8008EF9CF /* DreamListViewControllerModel.swift */; };
+		7BEC8F9D25AE8F96008EF9CF /* DreamListViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC8F9C25AE8F96008EF9CF /* DreamListViewControllerState.swift */; };
+		7BEC8FA025AE9D0C008EF9CF /* DreamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC8F9F25AE9D0C008EF9CF /* DreamDetailViewController.swift */; };
+		7BEC8FA325AE9D15008EF9CF /* FavoriteCreatureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEC8FA225AE9D15008EF9CF /* FavoriteCreatureListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +58,7 @@
 		7B41307525ADC4E3001360D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B41307825ADC4E3001360D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B41307A25ADC4E3001360D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B41308225ADC55B001360D5 /* DreamListViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		7B41308225ADC55B001360D5 /* DreamListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListViewController.swift; sourceTree = "<group>"; };
 		7B41308625ADCE20001360D5 /* Dream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
 		7B41308C25ADD34D001360D5 /* FireBreathingParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireBreathingParticle.sks; sourceTree = "<group>"; };
 		7B41308D25ADD34D001360D5 /* LaserFocusParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LaserFocusParticle.sks; sourceTree = "<group>"; };
@@ -74,6 +83,15 @@
 		7BA24E4B25ADF30900834976 /* CreatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureCell.swift; sourceTree = "<group>"; };
 		7BA24E4F25ADF30F00834976 /* DreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamCell.swift; sourceTree = "<group>"; };
 		7BA24E5225ADF5D500834976 /* DreamPreviewHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamPreviewHeaderReusableView.swift; sourceTree = "<group>"; };
+		7BEC8F8625AE7C73008EF9CF /* DreamScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamScene.swift; sourceTree = "<group>"; };
+		7BEC8F8925AE7EF2008EF9CF /* CreatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureCollectionViewCell.swift; sourceTree = "<group>"; };
+		7BEC8F8C25AE81ED008EF9CF /* EffectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectCollectionViewCell.swift; sourceTree = "<group>"; };
+		7BEC8F8F25AE870D008EF9CF /* CollectionViewHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderReusableView.swift; sourceTree = "<group>"; };
+		7BEC8F9325AE87D5008EF9CF /* TextEntryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7BEC8F9925AE88C8008EF9CF /* DreamListViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListViewControllerModel.swift; sourceTree = "<group>"; };
+		7BEC8F9C25AE8F96008EF9CF /* DreamListViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamListViewControllerState.swift; sourceTree = "<group>"; };
+		7BEC8F9F25AE9D0C008EF9CF /* DreamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamDetailViewController.swift; sourceTree = "<group>"; };
+		7BEC8FA225AE9D15008EF9CF /* FavoriteCreatureListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCreatureListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +141,7 @@
 			children = (
 				7B41306C25ADC4E1001360D5 /* AppDelegate.swift */,
 				7B41306E25ADC4E1001360D5 /* SceneDelegate.swift */,
-				7B41308225ADC55B001360D5 /* DreamListViewControllerTableViewController.swift */,
+				7BEC8F9725AE88A8008EF9CF /* DreamListViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				7B41308B25ADD319001360D5 /* Particles */,
+				7BEC8F8625AE7C73008EF9CF /* DreamScene.swift */,
 			);
 			path = SpriteKit;
 			sourceTree = "<group>";
@@ -226,8 +245,24 @@
 			isa = PBXGroup;
 			children = (
 				7BA24E5225ADF5D500834976 /* DreamPreviewHeaderReusableView.swift */,
+				7BEC8F8925AE7EF2008EF9CF /* CreatureCollectionViewCell.swift */,
+				7BEC8F8C25AE81ED008EF9CF /* EffectCollectionViewCell.swift */,
+				7BEC8F8F25AE870D008EF9CF /* CollectionViewHeaderReusableView.swift */,
+				7BEC8F9325AE87D5008EF9CF /* TextEntryCollectionViewCell.swift */,
 			);
 			path = "Collection View";
+			sourceTree = "<group>";
+		};
+		7BEC8F9725AE88A8008EF9CF /* DreamListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B41308225ADC55B001360D5 /* DreamListViewController.swift */,
+				7BEC8F9925AE88C8008EF9CF /* DreamListViewControllerModel.swift */,
+				7BEC8F9C25AE8F96008EF9CF /* DreamListViewControllerState.swift */,
+				7BEC8F9F25AE9D0C008EF9CF /* DreamDetailViewController.swift */,
+				7BEC8FA225AE9D15008EF9CF /* FavoriteCreatureListViewController.swift */,
+			);
+			path = DreamListViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,23 +346,32 @@
 				7B4130A425ADDE62001360D5 /* Rendering.swift in Sources */,
 				7B41306D25ADC4E1001360D5 /* AppDelegate.swift in Sources */,
 				7BA24E5025ADF30F00834976 /* DreamCell.swift in Sources */,
+				7BEC8F9025AE870D008EF9CF /* CollectionViewHeaderReusableView.swift in Sources */,
+				7BEC8F8725AE7C73008EF9CF /* DreamScene.swift in Sources */,
+				7BEC8F8D25AE81ED008EF9CF /* EffectCollectionViewCell.swift in Sources */,
 				7B4130A925ADDED7001360D5 /* Drawable.swift in Sources */,
 				7BA24E4425ADEF8700834976 /* MultiPaneLayout.swift in Sources */,
 				7BA24E2825ADE64000834976 /* UIView+Layout.swift in Sources */,
 				7BA24E3B25ADECA100834976 /* ZStackLayout.swift in Sources */,
 				7BA24E3425ADE99C00834976 /* InsetLayout.swift in Sources */,
-				7B41308325ADC55B001360D5 /* DreamListViewControllerTableViewController.swift in Sources */,
+				7B41308325ADC55B001360D5 /* DreamListViewController.swift in Sources */,
+				7BEC8FA025AE9D0C008EF9CF /* DreamDetailViewController.swift in Sources */,
 				7BA24E3825ADEBA700834976 /* BackgroundLayout.swift in Sources */,
 				7BA24E2325ADE5FB00834976 /* Layout.swift in Sources */,
 				7B41308725ADCE20001360D5 /* Dream.swift in Sources */,
+				7BEC8F9425AE87D5008EF9CF /* TextEntryCollectionViewCell.swift in Sources */,
 				7B41309E25ADD965001360D5 /* Dream+Diff.swift in Sources */,
 				7BA24E4C25ADF30900834976 /* CreatureCell.swift in Sources */,
+				7BEC8F9A25AE88C8008EF9CF /* DreamListViewControllerModel.swift in Sources */,
 				7B41306F25ADC4E1001360D5 /* SceneDelegate.swift in Sources */,
 				7BA24E4725ADF05600834976 /* DreamEffectLayout.swift in Sources */,
+				7BEC8F9D25AE8F96008EF9CF /* DreamListViewControllerState.swift in Sources */,
 				7BA24E2C25ADE64600834976 /* SKNode+Layout.swift in Sources */,
+				7BEC8FA325AE9D15008EF9CF /* FavoriteCreatureListViewController.swift in Sources */,
 				7BA24E3E25ADED2100834976 /* CascadingLayout.swift in Sources */,
 				7BA24E4125ADEE6300834976 /* DecoratingLayout.swift in Sources */,
 				7BA24E5325ADF5D500834976 /* DreamPreviewHeaderReusableView.swift in Sources */,
+				7BEC8F8A25AE7EF2008EF9CF /* CreatureCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

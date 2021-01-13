@@ -3,26 +3,171 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Lucid dreams similar-->
+        <scene sceneID="XKT-15-qi7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LucidDreamsSimilar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="rfp-ip-Rwk" customClass="DreamListViewController" customModule="LucidDreamsSimilar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZMQ-h7-LxS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jek-Vv-sFl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <connections>
+                            <outlet property="dataSource" destination="rfp-ip-Rwk" id="7dn-ho-ylX"/>
+                            <outlet property="delegate" destination="rfp-ip-Rwk" id="2qx-pY-UBL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lucid dreams similar" id="Znx-DH-bPF"/>
+                    <connections>
+                        <segue destination="oLP-8b-RWu" kind="presentation" identifier="showFavoriteCreaturePicker" id="jlS-xC-EWY"/>
+                        <segue destination="bjh-Nm-MID" kind="show" identifier="showDetail" id="zHM-1s-TUu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j0f-s7-rGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1320" y="139"/>
+        </scene>
+        <!--Dream Detail View Controller-->
+        <scene sceneID="pk4-Jv-n2x">
+            <objects>
+                <collectionViewController id="bjh-Nm-MID" customClass="DreamDetailViewController" customModule="LucidDreamsSimilar" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4SM-ge-eoh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ass-Pb-9gL">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CreatureCollectionViewCell" id="RyK-ig-hP8" customClass="CreatureCollectionViewCell" customModule="LucidDreamsSimilar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BMe-qF-hcW">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-iv-gVh">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hrY-iv-gVh" firstAttribute="leading" secondItem="BMe-qF-hcW" secondAttribute="leading" id="KuK-XA-YxZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="hrY-iv-gVh" secondAttribute="bottom" id="YUn-rR-MAk"/>
+                                        <constraint firstItem="hrY-iv-gVh" firstAttribute="top" secondItem="BMe-qF-hcW" secondAttribute="top" id="hRf-uP-4mh"/>
+                                        <constraint firstAttribute="trailing" secondItem="hrY-iv-gVh" secondAttribute="trailing" id="hsf-Sl-XdU"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="hrY-iv-gVh" id="R6Q-jX-ogr"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="EffectCollectionViewCell" id="oA7-Mf-Ro4" customClass="EffectCollectionViewCell" customModule="LucidDreamsSimilar" customModuleProvider="target">
+                                <rect key="frame" x="138" y="50" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="66l-Rt-Xxo">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="TextEntryCollectionViewCell" id="wcd-bD-cO7" customClass="TextEntryCollectionViewCell" customModule="LucidDreamsSimilar" customModuleProvider="target">
+                                <rect key="frame" x="276" y="97" width="32" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zo7-rM-lEm">
+                                    <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLE-vM-iGG">
+                                            <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xLE-vM-iGG" secondAttribute="bottom" id="9J7-Xu-LPX"/>
+                                        <constraint firstAttribute="trailing" secondItem="xLE-vM-iGG" secondAttribute="trailing" id="LYN-f0-7fP"/>
+                                        <constraint firstItem="xLE-vM-iGG" firstAttribute="leading" secondItem="Zo7-rM-lEm" secondAttribute="leading" id="cPK-iK-aju"/>
+                                        <constraint firstItem="xLE-vM-iGG" firstAttribute="top" secondItem="Zo7-rM-lEm" secondAttribute="top" id="qsw-88-Zpn"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="textField" destination="xLE-vM-iGG" id="l5H-mU-hSc"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewHeaderReusableView" id="lr7-Eb-2IC" customClass="CollectionViewHeaderReusableView" customModule="LucidDreamsSimilar" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Sj-5JC">
+                                    <rect key="frame" x="16" y="14.5" width="382" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailingMargin" secondItem="sTB-Sj-5JC" secondAttribute="trailing" constant="8" id="Khb-T4-Oem"/>
+                                <constraint firstItem="sTB-Sj-5JC" firstAttribute="centerY" secondItem="lr7-Eb-2IC" secondAttribute="centerY" id="X2g-ly-NfS"/>
+                                <constraint firstItem="sTB-Sj-5JC" firstAttribute="leading" secondItem="lr7-Eb-2IC" secondAttribute="leadingMargin" constant="8" id="cjq-LE-NkJ"/>
+                            </constraints>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="bjh-Nm-MID" id="qbs-3B-TEm"/>
+                            <outlet property="delegate" destination="bjh-Nm-MID" id="a14-6L-wUc"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="JYH-x6-L0L"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ezq-eh-CkV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228.985507246377" y="138.61607142857142"/>
+        </scene>
+        <!--Favorite Creature List View Controller-->
+        <scene sceneID="0U8-Pf-cL6">
+            <objects>
+                <tableViewController id="eZb-vv-onP" customClass="FavoriteCreatureListViewController" customModule="LucidDreamsSimilar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XZ5-52-rti">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="cZ8-O0-Q6Q">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cZ8-O0-Q6Q" id="Kr2-us-1oY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eZb-vv-onP" id="WkC-xQ-dwc"/>
+                            <outlet property="delegate" destination="eZb-vv-onP" id="y6D-Jk-YMb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ysz-hZ-Szi">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="40x-2X-7Kv">
+                            <connections>
+                                <action selector="cancelTapped" destination="eZb-vv-onP" id="3CL-Wl-6Md"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="8oz-Kf-RiY">
+                            <connections>
+                                <action selector="doneTapped" destination="eZb-vv-onP" id="WXk-qh-25k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Oa-Ls-4RA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228.985507246377" y="810.9375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jmv-wH-nbI">
@@ -35,12 +180,30 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ss3-8N-RSD"/>
+                        <segue destination="rfp-ip-Rwk" kind="relationship" relationship="rootViewController" id="jZo-Nq-EzB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCQ-bP-N5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HyU-qz-Zam">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oLP-8b-RWu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ttL-OX-HyJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eZb-vv-onP" kind="relationship" relationship="rootViewController" id="GRp-qC-V3v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0af-DE-5Mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318.840579710145" y="810.9375"/>
         </scene>
     </scenes>
     <resources>

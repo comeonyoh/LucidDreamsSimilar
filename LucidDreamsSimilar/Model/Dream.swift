@@ -26,13 +26,17 @@ struct Dream: Equatable {
             
             switch self {
                 case .unicorn(.yellow):
-                    name = "\(self)-yellow"
+                    name = "unicorn-yellow"
                 case .unicorn(.pink):
-                    name = "\(self)-pink"
+                    name = "unicorn-pink"
                 case .unicorn(.white):
-                    name = "\(self)-white"
-                default:
-                    name = "\(self)"
+                    name = "unicorn-white"
+                case .crusty:
+                    name = "crusty"
+                case .shark:
+                    name = "shark"
+                case .dragon:
+                    name = "dragon"
             }
             
             return UIImage(named: name)!
@@ -40,10 +44,12 @@ struct Dream: Equatable {
         
         var name: String {
             switch self {
-                case .unicorn(.yellow): return "Yellow \(self)"
-                case .unicorn(.pink): return "Pink \(self)"
-                case .unicorn(.white): return "White \(self)"
-                default: return "\(self)".capitalized
+                case .unicorn(.yellow): return "Yellow unicorn"
+                case .unicorn(.pink): return "Pink unicorn"
+                case .unicorn(.white): return "White unicorn"
+                case .crusty: return "Crusty"
+                case .shark: return "Shark"
+                case .dragon: return "Dragon"
             }
         }
         
