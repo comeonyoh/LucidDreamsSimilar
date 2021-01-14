@@ -14,8 +14,13 @@ class CollectionViewHeaderReusableView: UICollectionReusableView {
     @IBOutlet var label: UILabel?
     
     var title: String = "" {
-        didSet (newValue) {
-            label?.text = newValue
+        didSet {
+            label?.text = title
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.label?.frame = .init(x: 10, y: 0, width: self.bounds.width - 20, height: self.bounds.height)
     }
 }

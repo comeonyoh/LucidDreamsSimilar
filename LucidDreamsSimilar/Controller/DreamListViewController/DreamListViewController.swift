@@ -16,7 +16,7 @@ class DreamListViewController: UITableViewController {
         case pickFavoriteCreature = "showFavoriteCreaturePicker"
     }
     
-    enum Section: Int {
+    enum Section: Int, CaseIterable {
         case favoriteCreature = 0
         case dreams = 1
         
@@ -28,7 +28,7 @@ class DreamListViewController: UITableViewController {
             self.init(rawValue: section)!
         }
         
-        static let count = 2
+        static let count = Section.allCases.count
         
         var title: String {
             
@@ -43,7 +43,7 @@ class DreamListViewController: UITableViewController {
     
     var state = State.viewing
     var model = Model.initial
-    
+
     let _undoManager = UndoManager()
     
     override var undoManager: UndoManager? {
@@ -60,10 +60,9 @@ class DreamListViewController: UITableViewController {
         
         tableView.beginUpdates()
         
-        let modelDiff = oldModel.diffed(with: self.model)
-        modelDidChange(diff: modelDiff)
-        
+        modelDidChange(diff: oldModel.diffed(with: self.model))
         stateDidChange()
+
         tableView.endUpdates()
     }
     
@@ -93,8 +92,7 @@ class DreamListViewController: UITableViewController {
         }
         
         if diff.favoriteCreatureChanged {
-            let favoriteCreatureSection = IndexSet(integer: Section.favoriteCreature.rawValue)
-            tableView.reloadSections(favoriteCreatureSection, with: .automatic)
+            tableView.reloadSections(IndexSet(integer: Section.favoriteCreature.rawValue), with: .automatic)
         }
         
         if diff.hasAnyChanges {
@@ -158,7 +156,9 @@ class DreamListViewController: UITableViewController {
         }
         
         for indexPath in tableView.indexPathsForVisibleRows ?? [] {
+            
             if let cell = tableView.cellForRow(at: indexPath) {
+                
                 let section = Section(at: indexPath)
                 switch section {
                     case .favoriteCreature:
@@ -211,7 +211,7 @@ class DreamListViewController: UITableViewController {
     }
     
     override func encodeRestorableState(with coder: NSCoder) {
-        coder.encode(state.plistPresentation, forKey: "state")
+        coder.encode(state.plistRepresentation, forKey: "state")
     }
     
     override func decodeRestorableState(with coder: NSCoder) {
@@ -331,7 +331,7 @@ class DreamListViewController: UITableViewController {
                 }
                 
             case .duplicating:
-                withValues { (model, _) in
+                withValues { (model, state) in
                     var selectedDream = model.dreams[indexPath.row]
                     selectedDream.description += " (copy)"
                     model.append(selectedDream)
@@ -352,11 +352,8 @@ class DreamListViewController: UITableViewController {
         switch identifier {
             case .showDetail:
                 let detailViewController = segue.destination as! DreamDetailViewController
+                detailViewController.dream = model.dreams[selectedDreamIndex]
 
-                let dream = model.dreams[selectedDreamIndex]
-                detailViewController.dream = dream
-
-                // Register for any changes to the `Dream` while it's being edited.
                 detailViewController.dreamDidChange = { [weak self] newDream in
                     guard let strongSelf = self else { return }
 
@@ -367,14 +364,9 @@ class DreamListViewController: UITableViewController {
 
             case .pickFavoriteCreature:
                 let navigationController = segue.destination as! UINavigationController
-
                 let detailViewController = navigationController.viewControllers.first! as! FavoriteCreatureListViewController
-                detailViewController.favoriteCreature = model.favoriteCreature
 
-                /*
-                    Register for any changes to the favorite creature while its
-                    being selected.
-                */
+                detailViewController.favoriteCreature = model.favoriteCreature
                 detailViewController.favoriteCreatureDidChange = { [weak self] newFavoriteCreature in
                     guard let strongSelf = self else { return }
 
@@ -475,7 +467,6 @@ class DreamListViewController: UITableViewController {
             }
         }
     }
-
 }
 
 extension RangeReplaceableCollection where Index == Int {

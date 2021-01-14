@@ -106,9 +106,7 @@ struct DreamListViewControllerModel: Equatable {
             fatalError("The dreams should never change separate from the statements above.")
         }
         
-        let favoriteCreatureChanged = favoriteCreature != other.favoriteCreature
-        
-        return Diff(dreamChange: dreamChange, from: self, to: other, favoriteCreatureChanged: favoriteCreatureChanged)
+        return Diff(dreamChange: dreamChange, from: self, to: other, favoriteCreatureChanged: favoriteCreature != other.favoriteCreature)
     }
 }
 

@@ -31,4 +31,9 @@ class CreatureCollectionViewCell: UICollectionViewCell {
             super.isSelected
         }
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.imageView.frame = self.bounds
+    }
 }

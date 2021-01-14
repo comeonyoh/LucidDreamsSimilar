@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-struct Dream: Equatable {
+struct Dream: Equatable, Hashable {
     
     enum Creature: Equatable {
         
@@ -121,6 +121,10 @@ struct Dream: Equatable {
         self.creature = creature
         self.effects = effects
         self.numberOfCreatures = numberOfCreatures
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(description)
     }
 }
 

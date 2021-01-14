@@ -16,4 +16,9 @@ class TextEntryCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         textField.addTarget(textField, action: #selector(UITextField.resignFirstResponder), for: .editingDidEndOnExit)
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        textField.frame = self.bounds
+    }
 }

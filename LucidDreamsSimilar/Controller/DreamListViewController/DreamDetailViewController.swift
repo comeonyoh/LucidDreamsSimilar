@@ -9,14 +9,15 @@ import UIKit
 
 class DreamDetailViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    enum Section: Int {
+    enum Section: Int, CaseIterable {
+        
         case preview
         case description
         case numberOfCreatures
         case creature
         case effect
         
-        static let count = 5
+        static let count = Section.allCases.count
         
         var numberOfRows: Int {
             switch self {
@@ -54,11 +55,13 @@ class DreamDetailViewController: UICollectionViewController, UICollectionViewDel
     
     func withDream(_ mutateDream: (inout Dream) -> Void) {
         
-        guard let dream = self.dream else {
+        guard var dream = self.dream else {
             return
         }
         
         let oldDream = dream
+        
+        mutateDream(&dream)
         
         self.dream = dream
         
@@ -276,7 +279,7 @@ class DreamDetailViewController: UICollectionViewController, UICollectionViewDel
                 return CGSize(width: collectionView.bounds.width, height: 150)
 
             default:
-                return CGSize(width: collectionView.bounds.width, height: 50)
+                return CGSize(width: collectionView.bounds.width - 20, height: 50)
         }
     }
 
@@ -289,10 +292,11 @@ class DreamDetailViewController: UICollectionViewController, UICollectionViewDel
                 return .zero
 
             case .description, .numberOfCreatures:
-                return CGSize(width: collectionView.bounds.width, height: 45)
+                return CGSize(width: collectionView.bounds.width - 20, height: 45)
 
             case .creature, .effect:
-                return CGSize(width: 90, height: 90)
+                let size = collectionView.bounds.width / 3.0 - 8
+                return CGSize(width: size, height: size)
         }
     }
 

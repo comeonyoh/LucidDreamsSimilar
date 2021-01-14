@@ -12,7 +12,7 @@
         <scene sceneID="XKT-15-qi7">
             <objects>
                 <tableViewController id="rfp-ip-Rwk" customClass="DreamListViewController" customModule="LucidDreamsSimilar" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZMQ-h7-LxS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZMQ-h7-LxS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -53,23 +53,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-iv-gVh">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hrY-iv-gVh">
+                                            <rect key="frame" x="0.0" y="-10" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="hrY-iv-gVh" firstAttribute="leading" secondItem="BMe-qF-hcW" secondAttribute="leading" id="KuK-XA-YxZ"/>
-                                        <constraint firstAttribute="bottom" secondItem="hrY-iv-gVh" secondAttribute="bottom" id="YUn-rR-MAk"/>
-                                        <constraint firstItem="hrY-iv-gVh" firstAttribute="top" secondItem="BMe-qF-hcW" secondAttribute="top" id="hRf-uP-4mh"/>
-                                        <constraint firstAttribute="trailing" secondItem="hrY-iv-gVh" secondAttribute="trailing" id="hsf-Sl-XdU"/>
-                                    </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="imageView" destination="hrY-iv-gVh" id="R6Q-jX-ogr"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="EffectCollectionViewCell" id="oA7-Mf-Ro4" customClass="EffectCollectionViewCell" customModule="LucidDreamsSimilar" customModuleProvider="target">
-                                <rect key="frame" x="138" y="50" width="128" height="128"/>
+                                <rect key="frame" x="143" y="50" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="66l-Rt-Xxo">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -77,24 +72,19 @@
                                 </collectionViewCellContentView>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="TextEntryCollectionViewCell" id="wcd-bD-cO7" customClass="TextEntryCollectionViewCell" customModule="LucidDreamsSimilar" customModuleProvider="target">
-                                <rect key="frame" x="276" y="97" width="32" height="34"/>
+                                <rect key="frame" x="286" y="50" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zo7-rM-lEm">
-                                    <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLE-vM-iGG">
-                                            <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLE-vM-iGG">
+                                            <rect key="frame" x="0.0" y="47" width="112" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="xLE-vM-iGG" secondAttribute="bottom" id="9J7-Xu-LPX"/>
-                                        <constraint firstAttribute="trailing" secondItem="xLE-vM-iGG" secondAttribute="trailing" id="LYN-f0-7fP"/>
-                                        <constraint firstItem="xLE-vM-iGG" firstAttribute="leading" secondItem="Zo7-rM-lEm" secondAttribute="leading" id="cPK-iK-aju"/>
-                                        <constraint firstItem="xLE-vM-iGG" firstAttribute="top" secondItem="Zo7-rM-lEm" secondAttribute="top" id="qsw-88-Zpn"/>
-                                    </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="textField" destination="xLE-vM-iGG" id="l5H-mU-hSc"/>
@@ -105,18 +95,17 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Sj-5JC">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTB-Sj-5JC">
                                     <rect key="frame" x="16" y="14.5" width="382" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <constraints>
-                                <constraint firstAttribute="trailingMargin" secondItem="sTB-Sj-5JC" secondAttribute="trailing" constant="8" id="Khb-T4-Oem"/>
-                                <constraint firstItem="sTB-Sj-5JC" firstAttribute="centerY" secondItem="lr7-Eb-2IC" secondAttribute="centerY" id="X2g-ly-NfS"/>
-                                <constraint firstItem="sTB-Sj-5JC" firstAttribute="leading" secondItem="lr7-Eb-2IC" secondAttribute="leadingMargin" constant="8" id="cjq-LE-NkJ"/>
-                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="sTB-Sj-5JC" id="RVv-6b-Zan"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="bjh-Nm-MID" id="qbs-3B-TEm"/>
